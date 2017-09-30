@@ -100,7 +100,11 @@ public class youtubeTimecodeParser {
                                     break;
                             }
                         } else {
-                            hour = hours[0];
+                            if (hours[0].contains("h")) {
+                                hour = hours[0];
+                            } else {
+                                second = hours[0];
+                            }
                         }
                         break;
                 }
